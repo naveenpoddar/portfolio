@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naveen Poddar</title>
+    <link rel="stylesheet" href="build/styles.css" />
+  </head>
+  <body data-theme="dark">
+    <img src="./assets/hero-bg.jpeg" class="header-bg" />
+
+    <header class="app-header section">
+      <nav class="navigation">
+        <a href="/">
+          <h1>Naveen <span>Poddar</span></h1>
+        </a>
+        <ul>
+          <li><a href="/#about-me">About Me</a></li>
+          <li><a href="/#skills">My Skills</a></li>
+          <li><a href="/#education">Education</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero">
+        <div class="left">
+          <h5>Hello I'm</h5>
+          <h2 class="name">Naveen Poddar</h2>
+          <span class="about">Full Stack Developer, </span>
+          <p class="desc">
+            I love technology, i'm always working on new projects that are
+            enthusiastic.
+          </p>
+          <div class="button-group">
+            <a href="#contact" class="button">Contact Me</a>
+            <a href="#about-me" class="button outline">About Me</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- <section id="about-me" class="section about-me-section section-general">
+      <div class="heading">
+        <h5>About Me</h5>
+        <h3>Get to know me</h3>
+        <ul class="line">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="content">idk for now</div>
+    </section> -->
+
+    <section class="section section-general skills-section" id="skills">
+      <div class="heading">
+        <h5>My Skills</h5>
+        <h3>I Love Working on</h3>
+        <ul class="line">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="skills">
+        <div class="skill">
+          <div class="item-wrapper">
+            <div class="skill-icon">
+              <img
+                src="./assets/Next.png"
+                style="filter: invert()"
+                alt="Next & React"
+              />
+            </div>
+
+            <div class="skill-content">
+              <h4>NextJS/ReactJS</h4>
+              <p>
+                I really like the eco-system of <b>React</b> it just makes the
+                development so efficient. <b>NextJS</b> works pretty well
+                especially the for SEO rankings where react couldn't do better.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="item-wrapper">
+            <div class="skill-icon">
+              <img src="./assets/mern.png" alt="Mern Stack" />
+            </div>
+
+            <div class="skill-content">
+              <h4>MERN Stack</h4>
+              <p>
+                <b>MERN</b> is one of my favorite stack. It's the combination of
+                <b>MongoDB</b>, <b>Express</b>, <b>React</b> and <b>Node.js</b>.
+                I have a lot of projects that use this stack and the best part
+                is that its developer friendly.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="item-wrapper">
+            <div class="skill-icon">
+              <img src="./assets/discord-js.svg" alt="discord-js" />
+            </div>
+
+            <div class="skill-content">
+              <h4>Discord.JS</h4>
+              <p>
+                I am a big fan of <b>Discord.JS</b> like how it took over the
+                discord bot world. i really like its <b>OOP</b> way of making
+                bots. i have made so many fun stuff in discord.js
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-general education-section" id="education">
+      <div class="heading">
+        <h5>My Education</h5>
+        <h3>I am a Student</h3>
+        <ul class="line">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="item-list">
+          <span class="item active">School Life</span>
+        </div>
+        <div class="item-preview">
+          <div class="image"><img src="" alt="School Image" /></div>
+          <div class="info">
+            <h5>Currently Studying in</h5>
+            <h2>DAV Rajrappa</h2>
+            <p>
+              I did my basic schooling from <b>DAV Public School</b>. During the
+              school years i was always interested in technology. I learnt how
+              to use a computer at age 6 or around that, pretty young right?. My
+              brother and i went to the same school and he got into grade 7th
+              and i used to just study IT with his textbook, that was the time
+              when i learnt about <b>html</b> and i started coding since that
+              age. Everything i know till now i learnt from the internet it was
+              a good thing for me. I once took part in the science exhibition
+              back then i created a simple project on how we can convert
+              mechanical energy into electrical energy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact-form">
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Example: Elon Musk"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Example: elonmusk@spacex.com"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Can you help me with.."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button class="button" type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Thanks for visiting</h2>
+      <p>
+        I appreciate your time, hope you like the website, if you have any
+        feedback please let me know
+      </p>
+
+      <div class="social-media"></div>
+
+      <div class="copyright">
+        <span>Copyright Ⓒ2022 NaveenPoddar</span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+@mixin GlassContainer($color, $opacity: 0.15) {
+  border-radius: 5px;
+  background: rgba($color, $opacity);
+  backdrop-filter: blur(5px) saturate(180%);
+}

@@ -1,0 +1,80 @@
+@mixin FormComponent($buttonClr: #fff, $buttonTextClr: #dbfbff) {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+
+  .form-row {
+    display: flex;
+    gap: 1em;
+    width: 100%;
+
+    .form-group {
+      width: 100%;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.2em;
+      font-size: 1.1em;
+      color: #cde6e9;
+      font-weight: bold;
+      width: fit-content;
+    }
+
+    & input,
+    textarea {
+      display: block;
+      width: 100%;
+      border: none;
+      @include GlassContainer(#fff, 0.12);
+      padding: 0.6em;
+      font-size: 1em;
+      color: #fff;
+      opacity: 0.8;
+      margin-bottom: 0.5em;
+      outline: none;
+
+      &:focus {
+        @include GlassContainer(#fff, 0.2);
+      }
+    }
+
+    & textarea {
+      min-height: 10em;
+      resize: vertical;
+    }
+
+    & button[type="submit"] {
+      display: block;
+      width: 100%;
+      min-height: 2.5em;
+      border: none;
+      @include GlassContainer(#fff, 0.12);
+      background: $buttonClr;
+      padding: 0.6em;
+      font-size: 1em;
+      color: $buttonTextClr;
+      opacity: 0.8;
+      margin-bottom: 0.5em;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:focus,
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    & input::placeholder,
+    & textarea::placeholder {
+      color: #a9b6b8;
+    }
+  }
+}
