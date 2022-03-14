@@ -22,8 +22,7 @@ p {
   line-height: 24px;
 }
 .section {
-  padding: 0 calc(min(3rem, 10vw));
-  max-height: 100vh;
+  padding: 0 calc(min(3rem, 8vw));
   scroll-snap-align: center;
 }
 html {
@@ -39,6 +38,7 @@ html {
 
 .header-bg {
   position: absolute;
+  z-index: -1;
   top: 1;
   left: 1;
   width: calc(100% - 2px);
@@ -129,6 +129,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .hero > .left {
@@ -392,16 +393,23 @@ html {
 
       .image {
         @include GlassContainer($color: #fff, $opacity: 0.1);
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: 2rem;
+        width: 200px;
+        border-radius: 50%;
+        height: 200px;
 
         img {
-          display: none;
+          visibility: hidden;
+          border-radius: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: 200px;
+          height: 200px;
+          overflow: hidden;
+          object-fit: cover;
         }
       }
 
@@ -456,6 +464,7 @@ footer {
   p {
     color: rgb(85, 85, 85);
     width: 40%;
+    padding: 0 calc(min(3rem, 8vw));
   }
 
   .copyright {
@@ -468,5 +477,90 @@ footer {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-weight: 500;
     }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navigation ul {
+    display: none;
+  }
+  .app-header {
+    height: fit-content;
+  }
+  .hero .left {
+    width: 100%;
+    font-size: 1.25rem;
+    margin: 2rem 0;
+
+    .button-group {
+      font-size: 1.1rem;
+    }
+  }
+
+  .skills-section .skills {
+    flex-direction: column;
+
+    .skill {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
+  }
+
+  .education-section .content {
+    flex-direction: column;
+
+    .item-list {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      padding: 0;
+      flex-direction: row;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      .item {
+        min-width: 40%;
+        text-align: center;
+      }
+    }
+
+    .item-preview {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      max-height: initial;
+
+      .image {
+        margin: 0;
+        margin: 2rem 0;
+      }
+
+      .info {
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .contact-form {
+    margin: 0;
+    width: 100%;
+  }
+
+  footer {
+    p {
+      width: 100%;
+    }
+  }
+
+  .header-bg {
+    height: calc(100% - 30vh);
   }
 }
