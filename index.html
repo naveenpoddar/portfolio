@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Naveen Poddar</title>
-    <link rel="stylesheet" href="build/styles.css" />
+    <link rel="stylesheet" href="scss/styles.css" />
+    <!-- <link rel="stylesheet" href="build/styles.css" /> -->
     <script src="~partytown/partytown.js" defer></script>
-    <script src="scripts/main.js" type="text/partytown" defer></script>
+    <script src="scripts/main.js" type="text/javaScript" defer></script>
   </head>
   <body data-theme="dark">
-    <img src="./assets/hero-bg.jpeg" class="header-bg" />
+    <!-- <img src="./assets/hero-bg.jpeg" class="header-bg" /> -->
 
     <header class="app-header section">
-      <nav class="navigation">
+      <!-- <nav class="navigation">
         <a href="/">
           <h1>Naveen <span>Poddar</span></h1>
         </a>
@@ -23,24 +24,80 @@
           <li><a href="/#education">Education</a></li>
           <li><a href="/blog">Blog</a></li>
         </ul>
-      </nav>
+      </nav> -->
 
       <div class="hero">
-        <div class="left">
-          <h5>Hello I'm</h5>
-          <h2 class="name">Naveen Poddar</h2>
-          <span class="about">Full Stack Developer, </span>
-          <p class="desc">
-            I love technology, i'm always working on new projects that are
-            enthusiastic.
-          </p>
-          <div class="button-group">
-            <a href="#contact" class="button">Contact Me</a>
-            <a href="#about-me" class="button outline">About Me</a>
+        <h5 class="helloiam">Sup! I'm</h5>
+        <h2 class="name">Naveen Poddar</h2>
+        <span class="about">I am a Full-Stack Developer.</span>
+        <p class="desc">
+          I love to code ideas, i am coding since last 4-5 years i started as a kid. I have a passion in learning new
+          things and starting to build a career in the corporate world!
+        </p>
+
+        <!-- <div class="skills-container">
+          <div class="skill">
+            <div class="skill-wrapper">
+              <div class="skill-icon">
+                <img
+                  src="./assets/JavaScript_logo.svg"
+                  alt="JavaScript / Node.js"
+                />
+              </div>
+              <div class="skill-content">
+                <div class="skill-name">JavaScript / Node.js</div>
+              </div>
+            </div>
           </div>
+
+          <div class="skill">
+            <div class="skill-wrapper">
+              <div class="skill-icon">
+                <img src="./assets/DiscordJS_LOGO.png" alt="Discord.js" />
+              </div>
+              <div class="skill-content">
+                <div class="skill-name">Discord.js</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-wrapper">
+              <div class="skill-icon">
+                <img src="./assets/MongoDB_LOGO.webp" alt="Mongo DB" />
+              </div>
+              <div class="skill-content">
+                <div class="skill-name">Mongo DB</div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="cta-container">
+          <label>Would love to work with you!</label>
+          <a href="#contact" class="cta">Contact me</a>
         </div>
       </div>
     </header>
+
+    <hr />
+
+    <div class="skills-img-container">
+      <img
+      src="./assets/react-logo.png"
+      alt="Next & React"
+    />
+
+    <img src="./assets/express_logo.png" alt="Express.js" />
+    <img src="./assets/discord-js.svg" alt="discord.js" />
+    <img src="./assets/mongodb-logo.png" alt="MongoDB" />
+    <img src="./assets/sass-logo.png" alt="Sass" />
+    <!-- <img src="./assets/mern.png" alt="MERN Stack" /> -->
+
+
+    </div>
+
+    <hr>
 
     <!-- <section id="about-me" class="section about-me-section section-general">
       <div class="heading">
@@ -56,10 +113,75 @@
       <div class="content">idk for now</div>
     </section> -->
 
+    <section class="section section-general" id="recent-projects">
+      <div class="heading">
+        <!-- <h5>Technologies i use</h5> -->
+        <h3>My Recent Work</h3>
+        <ul class="line">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <div class="project-container">
+
+
+          <div class="project">
+            <div class="project-image">
+              <img src="./assets/node-playground.png" alt="Node Playground" />
+            </div>
+            <div class="project-content">
+              <h5>Online IDE: Node Playground</h5>
+              <p>
+                Node Playground is a simple and basic web based code editor which allows you to code in different languages. It has famous framework project templates that you can use. This uses docker in a very unique way.
+              </p>
+
+              <a href="https://github.com/naveenpoddar/node-playground" target="_blank" class="source-code">📎 Source Code</a>
+
+              <ul class="features">
+                <li class="feature-item">Next.js</li>
+                <li class="feature-item">Monaco Editor API</li>
+                <li class="feature-item">Xterm.js</li>
+                <li class="feature-item">Docker</li>
+              </ul>
+              <a target="_blank" href="https://playground.cursor.works" class="button invert">View Project</a>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project-image">
+              <img src="./assets/moskey.png" alt="Moskey" />
+            </div>
+            <div class="project-content">
+              <h5>Moskey (Coming Soon)</h5>
+              <p>
+                Moskey uses Artificial Intelligence to suggest the best avilable computer/laptop deal for its customer, alongside that it provies pc services at a very resonable rate which none of any competiters offer. It's starting to educate people by adding courses to their services most of them are free.
+              </p>
+
+              <a href="#" class="source-code"> </a>
+
+              <ul class="features">
+                <li class="feature-item">Tailwind CSS</li>
+                <li class="feature-item">Next.js</li>
+                <li class="feature-item">MongoDB</li>
+                <li class="feature-item">Redux</li>
+              </ul>
+
+              <a href="#" class="button invert">View Project</a>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+   
+
     <section class="section section-general skills-section" id="skills">
       <div class="heading">
-        <h5>My Skills</h5>
-        <h3>I Love Working on</h3>
+        <h3>My Expertise</h3>
         <ul class="line">
           <li></li>
           <li></li>
@@ -124,10 +246,11 @@
       </div>
     </section>
 
+    <hr>
+
     <section class="section section-general education-section" id="education">
       <div class="heading">
-        <h5>My Education</h5>
-        <h3>I am a Student</h3>
+        <h3>My Education</h3>
         <ul class="line">
           <li></li>
           <li></li>
@@ -160,9 +283,11 @@
       </div>
     </section>
 
+    <hr>
+
     <section class="section" id="contact">
       <div class="contact-form">
-        <form>
+        <form id="contact-me-form">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
