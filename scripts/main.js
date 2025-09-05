@@ -33,10 +33,10 @@ formEl.addEventListener("submit", async function contactMe(e) {
           "sec-fetch-site": "same-origin",
         },
         credentials: "omit",
-        mode: "cors",
+        mode: "no-cors",
       }
     );
-  } catch (err) { }
+  } catch (err) {}
 
   alert("Message sent successfully");
 });
