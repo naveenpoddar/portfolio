@@ -36,7 +36,7 @@ formEl.addEventListener("submit", async function contactMe(e) {
         mode: "cors",
       }
     );
-  } catch (err) {}
+  } catch (err) { }
 
   alert("Message sent successfully");
 });
