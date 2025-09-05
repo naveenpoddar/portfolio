@@ -186,6 +186,15 @@ html {
     font-weight: 200;
   }
 
+  .location {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 0.7em;
+    color: #83eaf1;
+    font-family: "Source Code Pro", monospace;
+    opacity: 0.9;
+  }
+
   .desc {
     opacity: 0.85;
     font-size: 1em;
@@ -493,6 +502,8 @@ html {
       width: 100%;
       padding-right: 15px;
       padding-left: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
 
       .item-wrapper {
         padding: 30px;
@@ -554,89 +565,68 @@ html {
   .content {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
 
-    .item-list,
-    .item-preview {
-      @include GlassContainer($color: #000, $opacity: 0.1);
-    }
-
-    .item-list {
-      height: fit-content;
-      flex: 0.25;
+    .education-container {
       display: flex;
       flex-direction: column;
-      padding: 0.8rem;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      gap: 2rem;
 
-      .item {
-        transition: 150ms ease-in-out;
-        cursor: pointer;
-        border-radius: 5px;
-        padding: 0.8rem 1rem;
-        color: white;
-        width: 100%;
+      .education-item {
+        @include GlassContainer($color: #000, $opacity: 0.1);
+        padding: 2rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
 
-        &.active {
-          background: $theme-gradient;
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        &:active {
-          opacity: 0.9;
-        }
-      }
-    }
+        .education-header {
+          margin-bottom: 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 1rem;
 
-    .item-preview {
-      flex: 0.75;
-      border-top-left-radius: 0;
-      max-height: calc(min(25rem, 80vh));
-      padding: 1.5rem;
-      display: flex;
+          h4 {
+            color: $normal-text-color;
+            font-size: 1.8em;
+            margin: 0;
+            font-family: "Source Code Pro", monospace;
+            flex: 1;
+            min-width: 200px;
+          }
 
-      .image {
-        @include GlassContainer($color: #fff, $opacity: 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 2rem;
-        width: 200px;
-        border-radius: 50%;
-        height: 200px;
-
-        img {
-          visibility: hidden;
-          border-radius: 50%;
-          min-width: 100%;
-          min-height: 100%;
-          width: 200px;
-          height: 200px;
-          overflow: hidden;
-          object-fit: cover;
-        }
-      }
-
-      .info {
-        width: 80%;
-
-        h5 {
-          color: $normal-text-color;
-          font-size: 1em;
-          font-family: "Source Code Pro", monospace;
-          margin-top: 0.5rem;
+          .duration {
+            color: #83eaf1;
+            font-size: 1.1em;
+            font-family: "Source Code Pro", monospace;
+            background: rgba(131, 234, 241, 0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 15px;
+            border: 1px solid rgba(131, 234, 241, 0.3);
+          }
         }
 
-        h2 {
-          color: #edfff4;
-          font-size: 2em;
-          line-height: 2;
-        }
+        .education-details {
+          p {
+            color: $sub-text-color;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1.1em;
 
-        p {
-          color: $sub-text-color;
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            b {
+              color: $head-text-color;
+              font-weight: 600;
+              font-size: 1.2em;
+            }
+          }
         }
       }
     }
@@ -649,6 +639,75 @@ html {
     @include GlassContainer($color: #000, $opacity: 0.1);
 
     color: white;
+  }
+}
+
+.experience-section {
+  .content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .experience-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+
+      .experience-item {
+        @include GlassContainer($color: #000, $opacity: 0.1);
+        padding: 2rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        width: 40rem;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .experience-header {
+          margin-bottom: 1rem;
+
+          h4 {
+            color: $normal-text-color;
+            font-size: 1.5em;
+            margin-bottom: 0.5rem;
+            font-family: "Source Code Pro", monospace;
+          }
+
+          h5 {
+            color: $head-text-color;
+            font-size: 1.2em;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+          }
+
+          .duration {
+            color: $sub-text-color;
+            font-size: 0.9em;
+            display: block;
+            margin-bottom: 0.3rem;
+            font-family: "Source Code Pro", monospace;
+          }
+
+          .location {
+            color: #83eaf1;
+            font-size: 0.9em;
+            display: block;
+            font-family: "Source Code Pro", monospace;
+          }
+        }
+
+        .experience-description {
+          p {
+            color: $sub-text-color;
+            line-height: 1.6;
+            font-size: 1em;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -759,42 +818,35 @@ footer {
   }
 
   .education-section .content {
-    flex-direction: column;
-
-    .item-list {
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin-bottom: 1rem;
-      padding: 0;
-      flex-direction: row;
-      overflow-x: auto;
-      overflow-y: hidden;
-
-      .item {
-        min-width: 40%;
-        text-align: center;
-      }
-    }
-
-    .item-preview {
-      flex: 0 0 100%;
-      max-width: 100%;
-      margin-bottom: 1rem;
-      padding: 0;
-      flex-direction: column;
-      align-items: center;
-      max-height: initial;
-
-      .image {
-        margin: 0;
-        margin: 2rem 0;
-      }
-
-      .info {
-        width: 100%;
-        text-align: center;
+    .education-container {
+      .education-item {
         padding: 1.5rem;
-        padding-top: 0;
+
+        .education-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.8rem;
+
+          h4 {
+            font-size: 1.5em;
+            min-width: auto;
+          }
+
+          .duration {
+            align-self: flex-start;
+            font-size: 1em;
+          }
+        }
+
+        .education-details {
+          p {
+            font-size: 1em;
+
+            b {
+              font-size: 1.1em;
+            }
+          }
+        }
       }
     }
   }
